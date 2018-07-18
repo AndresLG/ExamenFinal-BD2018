@@ -1,6 +1,9 @@
 -- Created by Vertabelo (http://vertabelo.com)
 -- Last modification date: 2018-07-18 15:01:36.62
-
+CREATE DATABASE BDTioJuanito
+GO
+USE BDTioJuanito
+GO
 -- tables
 -- Table: Apoderado
 CREATE TABLE Apoderado (
