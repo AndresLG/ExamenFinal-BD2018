@@ -1,9 +1,6 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2018-07-18 14:52:36.196
-CREATE DATABASE BDTioJuanito
-GO
-USE BDTioJuanito
-GO
+-- Last modification date: 2018-07-18 15:01:36.62
+
 -- tables
 -- Table: Apoderado
 CREATE TABLE Apoderado (
@@ -22,8 +19,8 @@ CREATE TABLE Asistente (
 
 -- Table: Barrio
 CREATE TABLE Barrio (
-    idBarrio int  NOT NULL,
-    nomBarrio int  NULL IDENTITY(1, 1),
+    idBarrio int  NOT NULL IDENTITY(1, 1),
+    nomBarrio int  NULL,
     CONSTRAINT Barrio_pk PRIMARY KEY  (idBarrio)
 );
 
@@ -150,12 +147,12 @@ ALTER TABLE Modalidad ADD CONSTRAINT Modalidad_Recorrido
     FOREIGN KEY (Recorrido_idRecor)
     REFERENCES Recorrido (idRecor);
 
--- Reference: Niño_Barrio (table: Nino)
+-- Reference: Nino_Barrio (table: Nino)
 ALTER TABLE Nino ADD CONSTRAINT Nino_Barrio
     FOREIGN KEY (Barrio_idBarrio)
     REFERENCES Barrio (idBarrio);
 
--- Reference: Niño_Colegio (table: Nino)
+-- Reference: Nino_Colegio (table: Nino)
 ALTER TABLE Nino ADD CONSTRAINT Nino_Colegio
     FOREIGN KEY (Colegio_idColg)
     REFERENCES Colegio (idColg);
